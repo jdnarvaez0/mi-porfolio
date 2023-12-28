@@ -1,0 +1,79 @@
+---
+import { Icon } from "astro-icon";
+
+/** 
+	Uses https://github.com/natemoo-re/astro-icon#readme
+	Find icons @ https://icones.js.org/
+*/
+const socialLinks = [
+	{
+		name: "mdi:github",
+		friendlyName: "Github",
+		link: "https://github.com/jdnarvaez0",
+	},
+	{
+		name: "mdi:linkedin",
+		friendlyName: "LinkedIn",
+		link: "https://www.linkedin.com/in/juandnarvaez/",
+	},
+	{
+		name: "mdi:twitter",
+		friendlyName: "Twitter",
+		link: "https://twitter.com/jdnarvaez_",
+	},
+	{
+		name: "mdi:email",
+		friendlyName: "Email",
+		link: "mailto:juand.dev0@gmail.com",
+	},
+	{
+		name: "mdi:discord",
+		friendlyName: "Discord",
+		link: "https://discord.gg/juan_david7085",
+	},
+	{
+		name: "mdi:instagram",
+		friendlyName: "Instagram",
+		link: "https://www.instagram.com/_jdnarvaez/",
+	},
+];
+---
+
+<div class="flex w-full flex-col gap-8">
+	<p class="text-base">
+		Si tienes preguntas o simplemente deseas entablar una conversación, estoy disponible. Siéntete
+		libre de enviarme un <a class="cactus-link inline-block" href="mailto:juand.dev@gmail.com"
+			>Email</a
+		>. Encuéntrame también en otros lugares en @_jdnarvaez.
+	</p>
+	<ul class="animated-list grid flex-grow grid-cols-1 gap-2 md:grid-cols-2">
+		{
+			socialLinks.map((link) => (
+				<li class="col-span-1 transition-opacity">
+					<a
+						target="_blank"
+						href={link.link}
+						class="border-primary inline-grid w-full rounded-lg border p-2 no-underline transition-opacity"
+					>
+						<div class="flex items-center gap-3">
+							<Icon class="h-8 w-8" name={link.name} aria-hidden="true" focusable="false" />
+							{link.friendlyName}
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 20 20"
+								fill="currentColor"
+								class="text-secondary ml-auto h-5 w-5"
+							>
+								<path
+									fill-rule="evenodd"
+									d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
+									clip-rule="evenodd"
+								/>
+							</svg>
+						</div>
+					</a>
+				</li>
+			))
+		}
+	</ul>
+</div>
