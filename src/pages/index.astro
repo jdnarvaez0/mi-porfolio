@@ -7,6 +7,7 @@ import { Image } from "astro:assets";
 import { Icon } from "astro-icon";
 import Avatar from "@/assets/images/perfil.jpg";
 import Experience from "@/components/Experience";
+import Stack from "@/components/Stack";
 
 const MAX_POSTS = 10;
 const allPosts = await getAllPosts();
@@ -54,24 +55,31 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 			</div>
 		</div>
 	</section>
-	<section class="mt-36">
+	<section class="mt-36" id="experience">
 		<div class="flex gap-4">
-			<Icon class="mt-1 h-5 w-5" name="zondicons:portfolio" aria-hidden="true" focusable="false" />
-			<h2 class="title mb-9 text-2xl">Experiencia laboral</h2>
+			<Icon class="mt-1 h-6 w-5" name="zondicons:portfolio" aria-hidden="true" focusable="false" />
+			<h2 class="title mb-4 text-2xl">Experiencia laboral</h2>
 		</div>
 		<Experience />
 	</section>
-	<section class="mt-36">
+	<section class="mt-8" id="projects">
 		<div class="flex gap-4">
 			<Icon class="mt-1 h-7 w-7" name="ph:code-bold" aria-hidden="true" focusable="false" />
-			<h2 class="title mb-9 text-2xl">Proyectos</h2>
+			<h2 class="title mb-4 text-2xl">Proyectos</h2>
 		</div>
 	</section>
-	<section class="mt-16">
-		<h2 class="title mb-4 text-xl">Technologies</h2>
+	<section class="mt-8" id="projects">
+		<div class="flex gap-4">
+			<Icon class="mt-1 h-7 w-7" name="ri:stack-fill" aria-hidden="true" focusable="false" />
+			<h2 class="title mb-4 text-2xl">Stack & Tools</h2>
+		</div>
+		<Stack />
 	</section>
-	<section aria-label="Blog post list" class="mt-24">
-		<h2 class="title mb-4 text-xl">Posts</h2>
+	<section aria-label="Blog post list" class="mt-8">
+		<div class="flex gap-4">
+			<Icon class="mt-1 h-7 w-7" name="mdi:paper-edit" aria-hidden="true" focusable="false" />
+			<h2 class="title mb-4 text-2xl">Posts</h2>
+		</div>
 		<ul class="space-y-4 sm:space-y-2">
 			{
 				allPostsByDate.map((p) => (
@@ -81,5 +89,11 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 				))
 			}
 		</ul>
+	</section>
+	<section class="mt-8" id="projects">
+		<div class="flex gap-4">
+			<Icon class="mt-1 h-7 w-7" name="ph:code-bold" aria-hidden="true" focusable="false" />
+			<h2 class="title mb-9 text-2xl">Contacto</h2>
+		</div>
 	</section>
 </PageLayout>

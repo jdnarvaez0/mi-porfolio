@@ -1,0 +1,20 @@
+---
+import SkillsFront from "../components/SkillsFront.astro";
+import SkillsBack from "../components/SkillsBackend.astro";
+import Tools from "../components/Tools.astro";
+---
+
+<div class="flex flex-col md:flex-row">
+	<div class="m-4 flex flex-col rounded-lg border p-3">
+		<h2 class="mb-4 text-center text-xl">Frontend</h2>
+		<SkillsFront />
+	</div>
+	<div class="m-4 flex flex-col rounded-lg border p-3">
+		<h2 class="mb-4 text-center text-xl">Backend</h2>
+		<SkillsBack />
+	</div>
+</div>
+<div class="m-4 flex flex-col rounded-lg border p-3">
+	<h2 class="mb-4 text-center text-xl">Herramientas</h2>
+	<Tools />
+</div>
