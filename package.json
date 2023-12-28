@@ -41,6 +41,7 @@
 		"eslint-plugin-import": "^2.29.0",
 		"eslint-plugin-jsx-a11y": "^6.8.0",
 		"eslint-plugin-prettier": "^5.0.1",
+		"flowbite": "^2.2.1",
 		"mdast-util-to-string": "^4.0.0",
 		"pagefind": "^1.0.4",
 		"postcss": "^8.4.32",
