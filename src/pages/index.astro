@@ -6,6 +6,7 @@ import { getAllPosts, sortMDByDate } from "@/utils";
 import { Image } from "astro:assets";
 import { Icon } from "astro-icon";
 import Avatar from "@/assets/images/perfil.jpg";
+import Badge from "@/components/Badge";
 import Experience from "@/components/Experience";
 import Stack from "@/components/Stack";
 import Contact from "@/components/Contact";
@@ -18,9 +19,9 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 <PageLayout meta={{ title: "Home" }}>
 	<section class="mt-8 md:mt-14">
 		<div
-			class="ms:items-end h-[calc(100vh-23rem)] justify-between sm:h-[calc(100vh-24rem)] sm:flex-row md:h-[calc(100vh-24rem)] md:items-center"
+			class="ms:items-end h-[calc(100vh-32rem)] justify-between sm:h-[calc(100vh-26rem)] sm:flex-row md:h-[calc(100vh-26rem)] md:items-center"
 		>
-			<div class="relative mb-4 w-[80px] sm:mb-4 sm:w-[100px] md:mb-4">
+			<div class="relative mb-4 w-[60px] sm:mb-4 sm:w-[80px] md:mb-4">
 				<Image
 					alt="Juan Narvaez"
 					height={0}
@@ -43,10 +44,19 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 					 Soy
 				</h2>
 
-				<h1 class="mb-1 text-2xl font-bold tracking-tight text-black dark:text-white md:text-4xl">
-					Juan David Narváez
+				<h1
+					class="flex flex-col pb-3 text-2xl font-bold text-gray-900 dark:text-white md:flex-row md:text-3xl lg:text-3xl"
+				>
+					Juan David Narváez<a
+						href="https://www.linkedin.com/in/juandnarvaez/"
+						target="_blank"
+						rel="noopener"
+						class="flex md:items-center md:justify-center"
+					>
+						<Badge>Disponible para trabajar</Badge>
+					</a>
 				</h1>
-				<p class="text-base font-medium text-gray-700 dark:text-gray-200 md:text-lg">
+				<p class="text-xs font-medium text-gray-700 dark:text-gray-200 md:text-lg">
 					Desarrollador Web con más de un año de experiencia en la creación de aplicaciones únicas.
 					Nacido en Colombia, pero actualmente residiendo en Buenos Aires, Argentina.
 				</p>
@@ -58,25 +68,40 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 	</section>
 	<section class="mt-36" id="experience">
 		<div class="flex gap-4">
-			<Icon class="mt-1 h-6 w-5" name="zondicons:portfolio" aria-hidden="true" focusable="false" />
-			<h2 class="title mb-6 text-2xl">Experiencia laboral</h2>
+			<Icon
+				class="mt-1 h-5 w-4 md:h-6 md:w-5"
+				name="zondicons:portfolio"
+				aria-hidden="true"
+				focusable="false"
+			/>
+			<h2 class="title mb-6 text-xl md:text-2xl">Experiencia laboral</h2>
 		</div>
 		<Experience />
 	</section>
-	<section class="mt-8" id="projects">
+	<section class="mt-10" id="projects">
 		<div class="flex gap-4">
-			<Icon class="mt-1 h-7 w-7" name="ph:code-bold" aria-hidden="true" focusable="false" />
-			<h2 class="title mb-6 text-2xl">Proyectos</h2>
+			<Icon
+				class="mt-0 h-7 w-6 md:mt-1 md:h-6 md:w-7"
+				name="ph:code-bold"
+				aria-hidden="true"
+				focusable="false"
+			/>
+			<h2 class="title mb-6 text-xl md:text-2xl">Proyectos</h2>
 		</div>
 	</section>
 	<section class="mt-8" id="projects">
 		<div class="flex gap-4">
-			<Icon class="mt-1 h-7 w-7" name="ri:stack-fill" aria-hidden="true" focusable="false" />
-			<h2 class="title mb-6 text-2xl">Stack & Tools</h2>
+			<Icon
+				class="mt-1 h-6 w-6 md:h-7 md:w-7"
+				name="ri:stack-fill"
+				aria-hidden="true"
+				focusable="false"
+			/>
+			<h2 class="title mb-6 text-xl md:text-2xl">Stack & Tools</h2>
 		</div>
 		<Stack />
 	</section>
-	<section aria-label="Blog post list" class="mt-8">
+	<section aria-label="Blog post list" class="mt-10">
 		<div class="flex gap-4">
 			<Icon class="mt-1 h-7 w-7" name="mdi:paper-edit" aria-hidden="true" focusable="false" />
 			<h2 class="title mb-6 text-2xl">Posts</h2>
@@ -91,9 +116,14 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 			}
 		</ul>
 	</section>
-	<section class="mt-8" id="projects">
+	<section class="mt-10" id="projects">
 		<div class="flex gap-4">
-			<Icon class="mt-1 h-7 w-7" name="ph:code-bold" aria-hidden="true" focusable="false" />
+			<Icon
+				class="mt-1 h-7 w-7"
+				name="icon-park-outline:email-down"
+				aria-hidden="true"
+				focusable="false"
+			/>
 			<h2 class="title mb-6 text-2xl">Contacto</h2>
 		</div>
 		<Contact />

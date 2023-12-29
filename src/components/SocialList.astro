@@ -12,6 +12,11 @@ const socialLinks: Array<{
 	isWebmention?: boolean;
 }> = [
 	{
+		name: "mdi:linkedin",
+		friendlyName: "LinkedIn",
+		link: "https://www.linkedin.com/in/juandnarvaez/",
+	},
+	{
 		name: "mdi:github",
 		friendlyName: "Github",
 		link: "https://github.com/jdnarvaez0",
@@ -21,11 +26,6 @@ const socialLinks: Array<{
 		friendlyName: "Twitter",
 		link: "https://twitter.com/jdnarvaez_",
 		isWebmention: true,
-	},
-	{
-		name: "mdi:linkedin",
-		friendlyName: "LinkedIn",
-		link: "https://www.linkedin.com/in/juandnarvaez/",
 	},
 	{
 		name: "mdi:email",
@@ -47,7 +47,7 @@ const socialLinks: Array<{
 						target="_blank"
 						rel={`noopener noreferrer ${isWebmention ? "me authn" : ""}`}
 					>
-						<Icon class="h-8 w-8" name={name} aria-hidden="true" focusable="false" />
+						<Icon class="h-6 w-6 md:h-8 md:w-8" name={name} aria-hidden="true" focusable="false" />
 						<span class="sr-only">{friendlyName}</span>
 					</a>
 				</li>

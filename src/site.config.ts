@@ -2,7 +2,7 @@ import type { SiteConfig } from "@/types";
 
 export const siteConfig: SiteConfig = {
 	// Used as both a meta property (src/components/BaseHead.astro L:31 + L:49) & the generated satori png (src/pages/og-image/[slug].png.ts)
-	author: "Chris Williams",
+	author: "Juan Narváez",
 	// Meta property used to construct the meta title property, found in src/components/BaseHead.astro L:11
 	title: "Portfolio de Juan Narvaez",
 	// Meta property used as the default description meta property
