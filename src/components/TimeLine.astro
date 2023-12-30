@@ -27,9 +27,9 @@ const { title, subtitle, time, image, link } = Astro.props;
 					href={link}
 					target="_blank">{title}</a
 				>
-				<span class="text-sm font-medium md:text-base">{subtitle}</span>
-				<time class="text-sm font-medium md:text-base" datetime="">{time}</time>
-				<p class="my-2">
+				<span class="text-xs font-semibold md:text-base">{subtitle}</span>
+				<time class="text-xs font-semibold md:text-base" datetime="">{time}</time>
+				<p class="my-2 text-xs md:text-base">
 					<slot />
 				</p>
 			</div>

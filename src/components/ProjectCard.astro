@@ -20,11 +20,11 @@ const { title, image, desc, url, badge, tags, target = "_blank" } = Astro.props;
 				)
 			}
 			<div class=": mt-5 md:ml-4 md:mt-0">
-				<h1 class="flex text-xl font-bold">
+				<h1 class="flex text-base font-bold md:text-xl">
 					{title}
 					{badge && <div class="badge badge-secondary mx-2">{badge}</div>}
 				</h1>
-				<p class="text-1xl py-1">{desc}</p>
+				<p class="py-1 text-xs md:text-base">{desc}</p>
 				<div class="card-actions flex flex-wrap md:justify-start">
 					{
 						tags &&
@@ -33,7 +33,7 @@ const { title, image, desc, url, badge, tags, target = "_blank" } = Astro.props;
 									<div
 										data-te-chip-init
 										data-te-ripple-init
-										class="[word-wrap: break-word] ms:text-[10] ligth:text-neutral-900 my-[4px] mr-2 flex h-[25px] cursor-pointer items-center justify-between rounded-[16px] border bg-[transparent] px-[10px] py-0 text-link transition-all duration-200 ease-in-out hover:bg-[#e0e0e0] dark:border-green-400 dark:text-neutral-200  dark:hover:border-neutral-100 dark:hover:bg-[#3a3a3a] dark:hover:text-neutral-100 md:text-[9] "
+										class="[word-wrap: break-word] ms:text-sm ligth:text-neutral-900 my-[4px] mr-2 flex h-[25px] cursor-pointer items-center justify-between rounded-[16px] border bg-[transparent] px-[10px] py-0 text-xs text-link transition-all duration-200 ease-in-out hover:bg-[#e0e0e0] dark:border-green-400 dark:text-neutral-200  dark:hover:border-neutral-100 dark:hover:bg-[#3a3a3a] dark:hover:text-neutral-100 md:text-sm "
 										data-te-ripple-color="dark"
 									>
 										{tag}
