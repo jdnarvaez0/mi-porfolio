@@ -14,10 +14,16 @@ const { title, subtitle, time, image, link } = Astro.props;
 	</div>
 	<div class="bd-grid px-4">
 		<div class="flex items-start gap-5">
-			<Image src={image} alt="Ataway" width={44} height={44} class="bg-neutral-5 rounded-full" />
+			<Image
+				src={image}
+				alt={title}
+				width={44}
+				height={44}
+				class="bg-neutral-5 hidden rounded-full md:block"
+			/>
 			<div class="flex flex-col">
 				<a
-					class="cactus-link title mr-auto inline-block text-lg md:text-xl"
+					class="cactus-link title mr-auto inline-block text-base md:text-xl"
 					href={link}
 					target="_blank">{title}</a
 				>

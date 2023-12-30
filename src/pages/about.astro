@@ -2,47 +2,116 @@
 import { Image } from "astro:assets";
 
 import PageLayout from "@/layouts/Base";
-import aboutImg from "@/assets/about-astro.png";
+import LogoAtaway from "@/assets/images/ataway_logo.jpeg";
+import LogoCoder from "@/assets/images/coderhouse_logo.jpeg";
+import Image1 from "@/assets/images/about-img1.jpg";
+import Image2 from "@/assets/images/about-img2.jpg";
+import Image3 from "@/assets/images/about-img3.jpg";
+import Contact from "@/components/Contact";
 
 const meta = {
-	title: "About",
+	title: "Sobre mi",
 	description: "I'm a starter theme for Astro.build",
 };
 ---
 
 <PageLayout meta={meta}>
-	<div class="space-y-6">
-		<h1 class="title">About</h1>
-		<p>
-			Hi, I’m a starter Astro. I’m particularly great for getting you started with your own blogging
-			website.
-		</p>
+	<div class="space-y-6 text-base">
 		<div class="flex justify-center">
-			<Image
-				src={aboutImg}
-				alt="A cartoon cactus looking at the 'Astro.build' logo"
-				loading="eager"
-				fetchpriority="high"
-			/>
+			<div class="relative h-80 w-80 md:h-96 md:w-96 lg:h-96 lg:w-96 xl:h-96 xl:w-96">
+				<Image
+					src={Image2}
+					alt="image2"
+					class="absolute h-full w-full rotate-6 scale-x-75 scale-y-75 transform rounded-lg object-cover"
+				/>
+				<Image
+					src={Image3}
+					alt="image4"
+					class="absolute -mx-0 h-full w-full -translate-x-5 -rotate-3 scale-x-75 scale-y-75 transform rounded-lg object-cover md:-mx-60"
+				/>
+				<Image
+					src={Image1}
+					alt="image1"
+					class="absolute mx-0 h-full w-full rotate-6 scale-x-75 scale-y-75 transform rounded-lg object-cover md:mx-60"
+				/>
+			</div>
 		</div>
-		<p>Here are my some of my awesome built in features:</p>
-		<ul class="list-inside list-disc">
-			<li>I'm ultra fast as I'm a static site</li>
-			<li>I'm fully responsive</li>
-			<li>I come with a light and dark mode</li>
-			<li>I'm easy to customise and add additional content</li>
-			<li>I have Tailwind CSS styling</li>
-			<li>Shiki code syntax highlighting</li>
-			<li>Satori for auto generating OG images for blog posts</li>
-		</ul>
-		<p>
-			Clone or fork my <a
-				class="cactus-link inline-block"
-				href="https://github.com/chrismwilliams/astro-cactus"
-				target="_blank"
-				rel="noopener noreferrer"
-				aria-label="github repository">repo</a
-			> if you like me!
-		</p>
+
+		<div class="flex flex-col sm:flex-row">
+			<div class="w-full sm:w-1/4">
+				<p class="text-lg font-bold">Sobre mi</p>
+			</div>
+			<div class="w-full sm:w-3/4">
+				<p class="mb-4">Hello World, Soy Juan Narváez</p>
+				<p class="mb-4">
+					Apasionado del desarrollo web, encuentro en cada línea de código una expresión artística.
+				</p>
+				<p class="mb-4">
+					Cuando no estoy trabajando, es probable que me encuentre en el gimnasio, jugando un
+					partido de fútbol o disfrutando de un momento en una cafetería.
+				</p>
+			</div>
+		</div>
+		<div class="flex flex-col sm:flex-row">
+			<div class="w-full sm:w-1/4">
+				<p class="text-lg font-bold">Experiencia</p>
+			</div>
+			<div class="w-full sm:w-3/4">
+				<p class="mb-4">+1 años de experiencia en desarrollo profesional</p>
+				<p class="mb-4">
+					Mi trayectoria comenzó al compartir mi pasión por la programación, guiando a otros en sus
+					primeros pasos en el mundo del código, una experiencia que siempre apreciaré.
+				</p>
+				<p class="mb-8">
+					Hoy en día, me desempeño como analista programador en Ataway, una consultora global que me
+					ha brindado una plataforma emocionante para desarrollar y aplicar mis habilidades
+					técnicas.
+				</p>
+				<div class="mb-8 flex items-center gap-4">
+					<Image
+						src={LogoAtaway}
+						alt="Ataway"
+						width={48}
+						height={48}
+						class="rounded-full bg-neutral-50"
+					/>
+					<div class="flex flex-col gap-px">
+						<p class="">Analista Programador</p>
+						<a
+							class="cactus-link mr-auto inline-block"
+							href="https://www.ataway.com/es-ar/"
+							target="_blank">Ataway</a
+						>
+					</div>
+					<p class="mb-6 ml-auto">2022 - Presente</p>
+				</div>
+				<div class="flex items-center gap-4">
+					<Image
+						src={LogoCoder}
+						alt="Coder House"
+						width={48}
+						height={48}
+						class="rounded-full bg-neutral-50"
+					/>
+					<div class="flex flex-col gap-px">
+						<p class="">Tutor programación</p>
+						<a
+							class="cactus-link mr-auto inline-block"
+							href="https://www.coderhouse.com/"
+							target="_blank">Coder House</a
+						>
+					</div>
+					<p class="mb-5 ml-auto">2021 - Presente</p>
+				</div>
+			</div>
+		</div>
+		<div class="flex flex-col sm:flex-row">
+			<div class="w-full sm:w-1/4">
+				<p class="text-lg font-bold">Contactame</p>
+			</div>
+			<div class="w-full sm:w-3/4">
+				<Contact />
+			</div>
+		</div>
 	</div>
 </PageLayout>

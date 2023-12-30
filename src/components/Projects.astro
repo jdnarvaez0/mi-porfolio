@@ -1,0 +1,32 @@
+---
+import ProjectCard from "./ProjectCard.astro";
+import ImgPokedex from "../assets/images/img-pokedex.png";
+import ImgKentuckyPizza from "../assets/images/img-kentucky.png";
+import ImgPortfolioVanilla from "../assets/images/img-porfolio.png";
+---
+
+<ProjectCard
+	title="HenryPokedex-MERN"
+	image={ImgPokedex}
+	desc="Aplicación web que muestra información sobre todos los Pokémon. Tiene una interfaz de usuario que permite buscar Pokémon por nombre, tipo o generación, y también crear tus propios Pokémon."
+	url="https://pi-henry-pokedex.vercel.app/"
+	badge="New"
+	tags={["React", "Redux", "Node", "Express", "PostgreSQL"]}
+/>
+
+<ProjectCard
+	title="Kentucky Pizza"
+	image={ImgKentuckyPizza}
+	desc="La aplicación tiene una interfaz de usuario fácil de usar que permite a los usuarios navegar por la selección de pizzas, agregarlas a su carrito y realizar un pedido"
+	url="https://restaurant-food-six.vercel.app/"
+	tags={["NextJs", "TypeScript", "TailwindCSS"]}
+/>
+
+<ProjectCard
+	title="My Portfolio Vanilla"
+	image={ImgPortfolioVanilla}
+	desc="Mi portfolio personal, usando HTML, CSS y JavaScript."
+	url="https://unique-nougat-30db13.netlify.app/"
+	badge="New"
+	tags={["JavaScript", "HTML", "CSS"]}
+/>

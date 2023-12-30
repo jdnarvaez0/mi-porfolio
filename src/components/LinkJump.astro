@@ -1,0 +1,9 @@
+---
+const { link } = Astro.props;
+---
+
+<span class="text-base sm:text-end">
+	<a class="cactus-link" href={link} aria-label="Ver mas">
+		<slot />
+	</a>
+</span>

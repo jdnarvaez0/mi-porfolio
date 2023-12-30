@@ -8,8 +8,10 @@ import { Icon } from "astro-icon";
 import Avatar from "@/assets/images/perfil.jpg";
 import Badge from "@/components/Badge";
 import Experience from "@/components/Experience";
+import Projects from "@/components/Projects";
 import Stack from "@/components/Stack";
 import Contact from "@/components/Contact";
+import LinkJump from "@/components/LinkJump";
 
 const MAX_POSTS = 10;
 const allPosts = await getAllPosts();
@@ -40,8 +42,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 						class="mx-3 mb-3 w-6 md:w-8"
 						src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif"
 						alt="hi"
-					/>
-					 Soy
+					/>Soy
 				</h2>
 
 				<h1
@@ -53,12 +54,13 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 						rel="noopener"
 						class="flex md:items-center md:justify-center"
 					>
-						<Badge>Disponible para trabajar</Badge>
+						<Badge>Disponible para nuevos proyectos</Badge>
 					</a>
 				</h1>
 				<p class="text-xs font-medium text-gray-700 dark:text-gray-200 md:text-lg">
 					Desarrollador Web con más de un año de experiencia en la creación de aplicaciones únicas.
 					Nacido en Colombia, pero actualmente residiendo en Buenos Aires, Argentina.
+					<LinkJump link="/about">Saber mas →</LinkJump>
 				</p>
 				<div class="mt-4">
 					<SocialList />
@@ -88,8 +90,9 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 			/>
 			<h2 class="title mb-6 text-xl md:text-2xl">Proyectos</h2>
 		</div>
+		<Projects />
 	</section>
-	<section class="mt-8" id="projects">
+	<section class="mt-10" id="projects">
 		<div class="flex gap-4">
 			<Icon
 				class="mt-1 h-6 w-6 md:h-7 md:w-7"
@@ -116,7 +119,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 			}
 		</ul>
 	</section>
-	<section class="mt-10" id="projects">
+	<section class="mt-10" id="contact">
 		<div class="flex gap-4">
 			<Icon
 				class="mt-1 h-7 w-7"
