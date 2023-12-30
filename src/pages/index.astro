@@ -1,17 +1,13 @@
 ---
 import PageLayout from "@/layouts/Base";
 import PostPreview from "@/components/blog/PostPreview";
-import SocialList from "@/components/SocialList";
 import { getAllPosts, sortMDByDate } from "@/utils";
-import { Image } from "astro:assets";
 import { Icon } from "astro-icon";
-import Avatar from "@/assets/images/perfil.jpg";
-import Badge from "@/components/Badge";
 import Experience from "@/components/Experience";
 import Projects from "@/components/Projects";
 import Stack from "@/components/Stack";
 import Contact from "@/components/Contact";
-import LinkJump from "@/components/LinkJump";
+import Header from "@/components/Header";
 
 const MAX_POSTS = 10;
 const allPosts = await getAllPosts();
@@ -20,53 +16,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 
 <PageLayout meta={{ title: "Home" }}>
 	<section class="mt-8 md:mt-14">
-		<div
-			class="ms:items-end h-[calc(100vh-32rem)] justify-between sm:h-[calc(100vh-26rem)] sm:flex-row md:h-[calc(100vh-26rem)] md:items-center"
-		>
-			<div class="relative mb-4 w-[60px] sm:mb-4 sm:w-[80px] md:mb-4">
-				<Image
-					alt="Juan Narvaez"
-					height={0}
-					width={0}
-					src={Avatar}
-					sizes="60vw"
-					class="rounded-full grayscale filter"
-				/>
-			</div>
-			<div class="flex flex-col">
-				<h2
-					class="flex items-center text-lg font-semibold text-gray-700 dark:text-gray-200 md:text-2xl"
-				>
-					Hola,
-					<img
-						class="mx-3 mb-3 w-6 md:w-8"
-						src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif"
-						alt="hi"
-					/>Soy
-				</h2>
-
-				<h1
-					class="flex flex-col pb-3 text-2xl font-bold text-gray-900 dark:text-white md:flex-row md:text-3xl lg:text-3xl"
-				>
-					Juan David Narváez<a
-						href="https://www.linkedin.com/in/juandnarvaez/"
-						target="_blank"
-						rel="noopener"
-						class="flex md:items-center md:justify-center"
-					>
-						<Badge>Disponible para nuevos proyectos</Badge>
-					</a>
-				</h1>
-				<p class="text-xs font-medium text-gray-700 dark:text-gray-200 md:text-lg">
-					Desarrollador Web con más de un año de experiencia en la creación de aplicaciones únicas.
-					Nacido en Colombia, pero actualmente residiendo en Buenos Aires, Argentina.
-					<LinkJump link="/about">Saber mas →</LinkJump>
-				</p>
-				<div class="mt-4">
-					<SocialList />
-				</div>
-			</div>
-		</div>
+		<Header />
 	</section>
 	<section class="mt-36" id="experience">
 		<div class="flex gap-4">
