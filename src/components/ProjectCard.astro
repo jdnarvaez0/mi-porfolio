@@ -24,7 +24,7 @@ const { title, image, desc, url, badge, tags, target = "_blank" } = Astro.props;
 					{title}
 					{badge && <div class="badge badge-secondary mx-2">{badge}</div>}
 				</h1>
-				<p class="py-1 text-xs md:text-base">{desc}</p>
+				<p class="py-1 text-xs font-medium md:text-base">{desc}</p>
 				<div class="card-actions flex flex-wrap md:justify-start">
 					{
 						tags &&
