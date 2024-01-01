@@ -42,11 +42,11 @@ const meta = {
 				<p class="text-lg font-bold">Sobre mi</p>
 			</div>
 			<div class="w-full sm:w-3/4">
-				<p class="mb-4">Hello World, Soy Juan Narváez</p>
-				<p class="mb-4">
+				<p class="mb-4 text-sm md:text-base">Hello World, Soy Juan Narváez</p>
+				<p class="mb-4 text-sm md:text-base">
 					Apasionado del desarrollo web, encuentro en cada línea de código una expresión artística.
 				</p>
-				<p class="mb-4">
+				<p class="mb-4 text-sm md:text-base">
 					Cuando no estoy trabajando, es probable que me encuentre en el gimnasio, jugando un
 					partido de fútbol o disfrutando de un momento en una cafetería.
 				</p>
@@ -57,51 +57,61 @@ const meta = {
 				<p class="text-lg font-bold">Experiencia</p>
 			</div>
 			<div class="w-full sm:w-3/4">
-				<p class="mb-4">+1 años de experiencia en desarrollo profesional</p>
-				<p class="mb-4">
+				<p class="mb-4 text-sm md:text-base">+1 años de experiencia en desarrollo profesional</p>
+				<p class="mb-4 text-sm md:text-base">
 					Mi trayectoria comenzó al compartir mi pasión por la programación, guiando a otros en sus
 					primeros pasos en el mundo del código, una experiencia que siempre apreciaré.
 				</p>
-				<p class="mb-8">
+				<p class="mb-8 text-sm md:text-base">
 					Hoy en día, me desempeño como analista programador en Ataway, una consultora global que me
 					ha brindado una plataforma emocionante para desarrollar y aplicar mis habilidades
 					técnicas.
 				</p>
-				<div class="mb-8 flex items-center gap-4">
-					<Image
-						src={LogoAtaway}
-						alt="Ataway"
-						width={48}
-						height={48}
-						class="rounded-full bg-neutral-50"
-					/>
-					<div class="flex flex-col gap-px">
-						<p class="">Analista Programador</p>
-						<a
-							class="cactus-link mr-auto inline-block"
-							href="https://www.ataway.com/es-ar/"
-							target="_blank">Ataway</a
-						>
+				<div>
+					<div class="mb-8 flex items-center gap-4">
+						<Image
+							src={LogoAtaway}
+							alt="Ataway"
+							width={48}
+							height={48}
+							class="rounded-full bg-neutral-50"
+						/>
+						<div class="flex flex-grow flex-col md:flex-row">
+							<div class="flex flex-col gap-px">
+								<p class="">Analista Programador</p>
+								<a
+									class="cactus-link mr-auto inline-block text-sm md:text-base"
+									href="https://www.ataway.com/es-ar/"
+									target="_blank"
+								>
+									Ataway
+								</a>
+							</div>
+							<p class="mb-0 text-sm md:mb-6 md:ml-auto md:text-base">2022 - Presente</p>
+						</div>
 					</div>
-					<p class="mb-6 ml-auto">2022 - Presente</p>
-				</div>
-				<div class="flex items-center gap-4">
-					<Image
-						src={LogoCoder}
-						alt="Coder House"
-						width={48}
-						height={48}
-						class="rounded-full bg-neutral-50"
-					/>
-					<div class="flex flex-col gap-px">
-						<p class="">Tutor programación</p>
-						<a
-							class="cactus-link mr-auto inline-block"
-							href="https://www.coderhouse.com/"
-							target="_blank">Coder House</a
-						>
+					<div class="flex items-center gap-4">
+						<Image
+							src={LogoCoder}
+							alt="Coder House"
+							width={48}
+							height={48}
+							class="rounded-full bg-neutral-50"
+						/>
+						<div class="flex flex-grow flex-col md:flex-row">
+							<div class="flex flex-col gap-px">
+								<p class="">Tutor de programación</p>
+								<a
+									class="cactus-link mr-auto inline-block text-sm md:text-base"
+									href="https://www.coderhouse.com/"
+									target="_blank"
+								>
+									Coder House
+								</a>
+							</div>
+							<p class="mb-0 text-sm md:mb-6 md:ml-auto md:text-base">2021 - Presente</p>
+						</div>
 					</div>
-					<p class="mb-5 ml-auto">2021 - Presente</p>
 				</div>
 			</div>
 		</div>
