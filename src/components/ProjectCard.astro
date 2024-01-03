@@ -4,7 +4,7 @@ const { title, image, desc, url, badge, tags, target = "_blank" } = Astro.props;
 ---
 
 <div
-	class="bg-base-100 mt-8 flex rounded-lg transition ease-in-out hover:scale-[102%] hover:shadow-xl"
+	class="bg-base-100 mb-10 mt-8 flex rounded-lg transition ease-in-out hover:scale-[102%] hover:shadow-xl"
 >
 	<a href={url} target={target}>
 		<div class="hero-content flex flex-col md:flex-row">
@@ -33,7 +33,7 @@ const { title, image, desc, url, badge, tags, target = "_blank" } = Astro.props;
 									<div
 										data-te-chip-init
 										data-te-ripple-init
-										class="[word-wrap: break-word] ms:text-sm ligth:text-neutral-900 my-[4px] mr-2 flex h-[25px] cursor-pointer items-center justify-between rounded-[16px] border bg-[transparent] px-[10px] py-0 text-xs text-link transition-all duration-200 ease-in-out hover:bg-[#e0e0e0] dark:border-green-400 dark:text-neutral-200  dark:hover:border-neutral-100 dark:hover:bg-[#3a3a3a] dark:hover:text-neutral-100 md:text-sm "
+										class="[word-wrap: break-word] ms:text-sm ligth:text-neutral-900 my-[4px] mr-2 flex h-[25px] cursor-pointer items-center justify-between rounded-[16px] border bg-[transparent] px-[10px] py-0 text-xs text-link transition-all duration-200 ease-in-out hover:bg-[#e0e0e0] md:text-sm dark:border-green-400  dark:text-neutral-200 dark:hover:border-neutral-100 dark:hover:bg-[#3a3a3a] dark:hover:text-neutral-100 "
 										data-te-ripple-color="dark"
 									>
 										{tag}

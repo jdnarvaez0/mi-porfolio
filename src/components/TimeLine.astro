@@ -3,16 +3,12 @@ import { Image } from "astro:assets";
 const { title, subtitle, time, image, link } = Astro.props;
 ---
 
-<div class="relative mt-6 flex border-l border-gray-400 dark:border-gray-800">
-	<!-- <div class="">
-		<span class="bg-primary mt-1 block h-4 w-4 rounded-full"></span>
-		<span class="bg-primary block h-full w-[6px] translate-x-[7px]"></span>
-	</div> -->
+<div class="relative flex border-l border-gray-400 dark:border-gray-800">
 	<div
-		class="absolute -left-1.5 h-3 w-3 rounded-full border border-white bg-gray-400 dark:border-gray-600 dark:bg-gray-600"
+		class="absolute -left-1.5 mt-3 h-3 w-3 rounded-full border border-white bg-gray-400 dark:border-gray-600 dark:bg-gray-600"
 	>
 	</div>
-	<div class="bd-grid px-4">
+	<div class="bd-grid px-4 pb-4">
 		<div class="flex items-start gap-5">
 			<Image
 				src={image}
@@ -27,8 +23,8 @@ const { title, subtitle, time, image, link } = Astro.props;
 					href={link}
 					target="_blank">{title}</a
 				>
-				<span class="text-sm font-semibold md:text-base">{subtitle}</span>
-				<time class="text-sm font-semibold md:text-base" datetime="">{time}</time>
+				<span class="font-regular text-sm md:text-lg">{subtitle}</span>
+				<time class="font-regular text-sm md:text-lg" datetime="">{time}</time>
 				<p class="my-2 text-xs font-medium md:text-base">
 					<slot />
 				</p>

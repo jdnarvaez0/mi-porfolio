@@ -30,7 +30,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 		</div>
 		<Experience />
 	</section>
-	<section class="mt-10" id="projects">
+	<section class="mb-10 mt-10" id="projects">
 		<div class="flex gap-4">
 			<Icon
 				class="mt-0 h-7 w-6 md:mt-1 md:h-6 md:w-7"
@@ -41,8 +41,11 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 			<h2 class="title mb-6 text-xl md:text-2xl">Proyectos</h2>
 		</div>
 		<Projects />
+		<p class="mb-10 mt-5 text-right text-sm">
+			<a class="text-primary text-base md:text-lg" href="/works"> ...& mas &rarr;</a>
+		</p>
 	</section>
-	<section class="mt-12" id="projects">
+	<section class="mb-10 mt-10" id="projects">
 		<div class="flex gap-4">
 			<Icon
 				class="mt-1 h-6 w-6 md:h-7 md:w-7"
@@ -54,7 +57,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 		</div>
 		<Stack />
 	</section>
-	<section aria-label="Blog post list" class="mt-12" id="blog">
+	<section aria-label="Blog post list" class="mb-10 mt-24" id="blog">
 		<div class="flex gap-4">
 			<Icon class="mt-1 h-7 w-7" name="mdi:paper-edit" aria-hidden="true" focusable="false" />
 			<h2 class="title mb-10 text-xl md:text-2xl">Posts</h2>
@@ -68,6 +71,9 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 				))
 			}
 		</ul>
+		<p class="mb-10 mt-5 text-right text-sm">
+			<a class="text-primary text-base md:text-lg" href="/posts"> ...& mas &rarr;</a>
+		</p>
 	</section>
 	<section class="mt-12" id="contact">
 		<div class="flex gap-4">
