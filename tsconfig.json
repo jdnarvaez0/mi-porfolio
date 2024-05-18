@@ -10,7 +10,8 @@
 			"@/utils": ["src/utils/index.ts"],
 			"@/stores/*": ["src/stores/*"],
 			"@/types": ["src/types.ts"],
-			"@/site-config": ["src/site.config.ts"]
+			"@/site-config": ["src/site.config.ts"],
+			"@/icons/*": ["src/icons/*.astro"]
 		}
 	},
 	"include": ["src", "*.ts"],

@@ -1,6 +1,6 @@
 ---
 import { Image } from "astro:assets";
-import { Icon } from "astro-icon";
+// import { Icon } from 'astro-icon/components'
 const { title, image, desc, url, badge, tags, target = "_blank" } = Astro.props;
 ---
 
@@ -38,7 +38,7 @@ const { title, image, desc, url, badge, tags, target = "_blank" } = Astro.props;
 										data-te-ripple-color="dark"
 									>
 										<span data-te-chip-close class="">
-											<Icon name="logos:javascript" class="me-2 h-3 w-3" />
+											{/* <Icon name="logos:javascript" class="me-2 h-3 w-3" /> */}
 										</span>
 										{tag}
 									</div>

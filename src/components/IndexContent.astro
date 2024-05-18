@@ -1,0 +1,73 @@
+---
+import { Icon } from "astro-icon/components";
+import Experience from "@/components/Experience";
+import Projects from "@/components/Projects";
+import Stack from "@/components/Stack";
+import Contact from "@/components/Contact";
+import PostPreview from "@/components/blog/PostPreview";
+
+import { getAllPosts, sortMDByDate } from "@/utils";
+const MAX_POSTS = 10;
+const allPosts = await getAllPosts();
+const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
+---
+
+<section class="mt-36" id="experience">
+	<div class="flex gap-4">
+		<Icon
+			class="mt-1 h-5 w-4 md:h-6 md:w-5"
+			name="portfolio"
+			aria-hidden="true"
+			focusable="false"
+		/>
+		<h2 class="title mb-6 text-xl md:text-2xl">Experiencia laboral</h2>
+	</div>
+	<Experience />
+</section>
+<section class="mb-10 mt-10" id="projects">
+	<div class="flex gap-4">
+		<Icon
+			class="mt-0 h-7 w-6 md:mt-1 md:h-6 md:w-7"
+			name="mdi:code"
+			aria-hidden="true"
+			focusable="false"
+		/>
+		<h2 class="title mb-6 text-xl md:text-2xl">Proyectos</h2>
+	</div>
+	<Projects />
+	<p class="mb-10 mt-5 text-right text-sm">
+		<a class="text-primary text-base md:text-lg" href="/works"> ...& mas &rarr;</a>
+	</p>
+</section>
+<section class="mb-10 mt-10" id="projects">
+	<div class="flex gap-4">
+		<Icon class="mt-1 h-6 w-6 md:h-7 md:w-7" name="stack" aria-hidden="true" focusable="false" />
+		<h2 class="title mb-10 text-xl md:text-2xl">Stack & Tools</h2>
+	</div>
+	<Stack />
+</section>
+<section aria-label="Blog post list" class="mb-10 mt-24" id="blog">
+	<div class="flex gap-4">
+		<Icon class="mt-1 h-7 w-7" name="mdi:paper-edit" aria-hidden="true" focusable="false" />
+		<h2 class="title mb-10 text-xl md:text-2xl">Posts</h2>
+	</div>
+	<ul class="space-y-4 sm:space-y-2">
+		{
+			allPostsByDate.map((p) => (
+				<li class="flex flex-col gap-x-2 sm:flex-row">
+					<PostPreview post={p} />
+				</li>
+			))
+		}
+	</ul>
+	<p class="mb-10 mt-5 text-right text-sm">
+		<a class="text-primary text-base md:text-lg" href="/posts"> ...& mas &rarr;</a>
+	</p>
+</section>
+<section class="mt-12" id="contact">
+	<div class="flex gap-4">
+		<Icon class="mt-1 h-7 w-7" name="contact" aria-hidden="true" focusable="false" />
+		<h2 class="title mb-10 text-xl md:text-2xl">Contacto</h2>
+	</div>
+	<Contact />
+</section>
