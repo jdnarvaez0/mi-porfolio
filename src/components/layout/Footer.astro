@@ -2,6 +2,9 @@
 import { menuLinks, siteConfig } from "@/site-config";
 
 const year = new Date().getFullYear();
+const { url } = Astro.request;
+const currentPath = new URL(url).pathname;
+const isHomePage = currentPath === "/";
 ---
 
 <footer
@@ -15,12 +18,17 @@ const year = new Date().getFullYear();
 		aria-label="More on this site"
 		class="flex gap-x-2 sm:gap-x-0 sm:divide-x sm:divide-gray-500"
 	>
+		<a href="/" class="py-2 sm:px-2 sm:py-0 sm:hover:text-textColor sm:hover:underline"> Inicio</a>
 		{
-			menuLinks.map((link) => (
-				<a href={link.path} class="py-2 sm:px-2 sm:py-0 sm:hover:text-textColor sm:hover:underline">
-					{link.title}
-				</a>
-			))
+			isHomePage &&
+				menuLinks.map((link) => (
+					<a
+						href={link.path}
+						class="py-2 sm:px-2 sm:py-0 sm:hover:text-textColor sm:hover:underline"
+					>
+						{link.title}
+					</a>
+				))
 		}
 	</nav>
 </footer>

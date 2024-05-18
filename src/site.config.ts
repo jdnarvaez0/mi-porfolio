@@ -6,22 +6,19 @@ export const siteConfig: SiteConfig = {
 	// Meta property used to construct the meta title property, found in src/components/BaseHead.astro L:11
 	title: "Portfolio de Juan Narvaez",
 	// Meta property used as the default description meta property
-	description: "An opinionated starter theme for Astro",
+	description: "¡Échale un vistazo a mi portafolio y conoceme un poco más!",
 	// HTML lang property, found in src/layouts/Base.astro L:18
-	lang: "en-GB",
+	lang: "es-AR",
 	// Meta property, found in src/components/BaseHead.astro L:42
-	ogLocale: "en_GB",
+	ogLocale: "es_AR",
 	// Date.prototype.toLocaleDateString() parameters, found in src/utils/date.ts.
 	date: {
-		locale: "en-GB",
+		locale: "es-AR",
 		options: {
 			day: "numeric",
 			month: "short",
 			year: "numeric",
 		},
-	},
-	webmentions: {
-		link: "https://webmention.io/astro-cactus.chriswilliams.dev/webmention",
 	},
 };
 
