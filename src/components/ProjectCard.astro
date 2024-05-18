@@ -1,6 +1,6 @@
 ---
 import { Image } from "astro:assets";
-// import { Icon } from 'astro-icon/components'
+import { Icon } from "astro-icon/components";
 const { title, image, desc, url, badge, tags, target = "_blank" } = Astro.props;
 ---
 
@@ -34,11 +34,11 @@ const { title, image, desc, url, badge, tags, target = "_blank" } = Astro.props;
 									<div
 										data-te-chip-init
 										data-te-ripple-init
-										class="[word-wrap: break-word] ms:text-sm ligth:text-neutral-900 my-[4px] mr-2 flex h-[25px] cursor-pointer items-center justify-between rounded-[16px] border bg-[transparent] px-[10px] py-0 text-xs text-link transition-all duration-200 ease-in-out hover:bg-[#e0e0e0] md:text-sm dark:border-green-400  dark:text-neutral-200 dark:hover:border-neutral-100 dark:hover:bg-[#3a3a3a] dark:hover:text-neutral-100 "
+										class="[word-wrap: break-word] ms:text-sm ligth:text-neutral-900 my-[4px] mr-2 flex h-[30px] cursor-pointer items-center justify-between rounded-[16px] border bg-[transparent] px-[10px] py-0 text-xs text-link transition-all duration-200 ease-in-out hover:bg-[#e0e0e0] dark:border-green-400 dark:text-neutral-200  dark:hover:border-neutral-100 dark:hover:bg-[#3a3a3a] dark:hover:text-neutral-100 md:text-sm "
 										data-te-ripple-color="dark"
 									>
-										<span data-te-chip-close class="">
-											{/* <Icon name="logos:javascript" class="me-2 h-3 w-3" /> */}
+										<span data-te-chip-close>
+											<Icon name={tag} class="me-3 h-5 w-5" />
 										</span>
 										{tag}
 									</div>
