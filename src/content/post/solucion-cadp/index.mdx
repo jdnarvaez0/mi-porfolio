@@ -1,0 +1,104 @@
+---
+title: "Solución a las prácticas de CADP"
+description: "En este blog, exploramos las soluciones a los ejercicios planteados en la materia de Conceptos de Algoritmos, Datos y Programas (CADP)."
+coverImage:
+  src: "./cover.jpg"
+  alt: "imagen de portada"
+tags: ["Pascal", "UNLP"]
+publishDate: "2024-05-28"
+---
+
+En este espacio estaré compartiendo mis soluciones a las prácticas de la materia
+"Conceptos y Algoritmos de Programación" (CADP) de la Facultad de Informática de
+la Universidad Nacional de La Plata. Mi objetivo es crear un recurso útil tanto
+para los estudiantes actuales como para aquellos que se están preparando para
+cursar esta asignatura.
+
+## Practica 0
+
+### Ejercicio 1
+
+_Implemente un programa que lea por teclado dos números enteros e imprima en pantalla los valores leídos en orden inverso. Por ejemplo, si se ingresan los números 4 y 8, debe mostrar el mensaje: Se ingresaron los valores 8 y 4._
+
+```js
+program ejericio1;
+var
+	num1, num2: Integer;
+begin
+	writeln('Ingrese el numero 1:');
+	readln(num1);
+	writeln('Ingrese el numero 2:');
+	readln(num2);
+	writeln('Se ingresaron los valores: ', num2, ' y ', num1);
+end.
+```
+
+### Ejrcicio 2
+
+_Modifique el programa anterior para que el mensaje de salida muestre la suma de ambos números:_
+
+_a. Utilizando una variable adicional_
+
+_b. Sin utilizar una variable adicional_
+
+```js
+program ejericicio2;
+var
+	num1,num2,total: Integer;
+begin
+	writeln('Ingrese el numero 1:');
+	readln(num1);
+
+	writeln('Ingrese el numero 2:');
+	readln(num2);
+
+	total := num1+num2;
+    //a. Utilizando una variable adicional
+	writeln('El tatal de la suma: ', total);
+	//b. Sin utilizar una variable adicional
+	writeln('El total de la suma: ', num2 + num1);
+
+end.
+```
+
+### Ejercicio 3
+
+_Implemente un programa que lea dos números reales e imprima el resultado de la división de los mismos con una precisión de dos decimales._
+
+Por ejemplo, si se ingresan los valores `4,5` y `7,2`, debe imprimir:
+
+_El resultado de dividir `4,5` por `7,2` es `0,62`_
+
+**Notación para Imprimir Números Reales**
+
+_Recuerde que para imprimir en pantalla números reales puede utilizar la notación:_
+
+```pascal
+writeln(X:Y:Z)
+```
+
+_donde X es el número a imprimir, Y es el ancho (en cantidad de caracteres) que
+debe ocupar la impresión, y Z es la cantidad de decimales. Por ejemplo, sea el número
+`pi=3.141592654` :_
+
+```js
+3.14 => writeln(pi,1,2);
+3.14 => writeln(pi,8,2);
+//(hay 4 espacios delante del 3, para completar 8 caracteres de ancho)
+3,1415 => writeln(pi,1,4);
+```
+
+```js
+program ejercicio3;
+var
+	num1, num2, resultado: Real;
+begin
+	writeln('Ingrese el numero uno: ');
+	readln(num1);
+	writeln('Ingrese el numero dos: ');
+	readln(num2);
+
+	resultado:= num1 / num2;
+	writeln('El resultado de la division: ', resultado:0:2);
+end.
+```

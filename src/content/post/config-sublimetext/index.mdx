@@ -1,0 +1,101 @@
+---
+title: "Configuracion de Sublime Text y Geany para Pascal"
+description: "En este blog, exploramos las soluciones a los ejercicios planteados en la materia de Conceptos de Algoritmos, Datos y Programas (CADP)."
+tags: ["Pascal", "UNLP", "SublimeText", "geany"]
+publishDate: "2024-05-31"
+---
+
+En esta guía, te mostraré cómo configurar Sublime Text para que puedas editar, compilar y ejecutar código en Pascal de manera eficiente.
+
+## Configuracion de Sublime Text
+
+### Instalación de Sublime Text
+
+1. Descarga Sublime Text desde el [sitio oficial](https://www.sublimetext.com/).
+2. Ejecuta el instalador y sigue las instrucciones para completar la instalación.
+
+#### Instalación de Free Pascal Compiler
+
+1. Descarga el compilador Free Pascal desde el [sitio oficial](https://www.freepascal.org/).
+2. Ejecuta el instalador y sigue las instrucciones para completar la instalación.
+
+#### Configuración de Sublime Text para Pascal
+
+1. **Abre Sublime Text** y ve a `Preferences > Browse Packages...`. Esto abrirá la carpeta de paquetes de Sublime Text.
+2. Navega a la carpeta `User` y crea un archivo llamado `Pascal.sublime-build`.
+3. Abre `Pascal.sublime-build` y añade el siguiente código
+
+```json
+{
+	"shell_cmd": "fpc $file_name && start ${file_base_name} && pause"
+}
+```
+
+Esto configura un nuevo sistema de compilación en Sublime Text que utiliza el compilador Free Pascal. La línea de comando `fpc $file_name` compila el archivo actual, `start ${file_base_name}` ejecuta el archivo compilado y `pause` mantiene la consola abierta después de la ejecución.
+
+4. Guarda el archivo y cierra la ventana del editor de texto.
+
+#### Cómo compilar y ejecutar código Pascal
+
+1. **Crea un nuevo archivo en Sublime Text** y escribe tu código en Pascal. Por ejemplo:
+
+   ```pascal
+   program HelloWorld;
+   begin
+     writeln('Hello, world!');
+   end.
+   ```
+
+2. Guarda el archivo con la extensión `.pas`, por ejemplo, `HelloWorld.pas`.
+3. Para compilar y ejecutar tu código, ve a `Tools > Build System` y selecciona `Pascal`.
+4. Luego, ve a `Tools > Build` o simplemente presiona `Ctrl+B`.
+
+Si todo está configurado correctamente, verás una ventana de la consola que muestra la salida de tu programa Pascal.
+
+## Configuracion de Geany
+
+#### Instalación de Geany
+
+1. Descarga Geany desde el [sitio oficial](https://www.geany.org/).
+2. Ejecuta el instalador y sigue las instrucciones para completar la instalación.
+
+#### Instalación de Free Pascal Compiler
+
+1. Descarga el compilador Free Pascal desde el [sitio oficial](https://www.freepascal.org/).
+2. Ejecuta el instalador y sigue las instrucciones para completar la instalación.
+
+#### Configuración de Geany para Pascal
+
+1. **Abre Geany** y ve a `Build > Set Build Commands`. Esto abrirá la ventana de configuración de comandos de construcción.
+
+2. En la sección de `Commands` (Comandos), configura los siguientes campos:
+
+   - **Compile**:
+     ```sh
+     fpc "%f"
+     ```
+   - **Execute**:
+     ```sh
+     "./%e"
+     ```
+
+   Aquí, `%f` se refiere al nombre del archivo actual y `%e` se refiere al nombre del archivo sin la extensión.
+
+3. Haz clic en `Apply` y luego en `Close` para guardar la configuración.
+
+#### Cómo compilar y ejecutar código Pascal
+
+1. **Crea un nuevo archivo en Geany** y escribe tu código en Pascal. Por ejemplo:
+
+   ```pascal
+   program HelloWorld;
+   begin
+     writeln('Hello, world!');
+   end.
+   ```
+
+2. Guarda el archivo con la extensión `.pas`, por ejemplo, `HelloWorld.pas`.
+
+3. Para compilar tu código, ve a `Build > Compile` o simplemente presiona `F8`. Si la compilación es exitosa, se generará un archivo ejecutable en el mismo directorio que tu archivo fuente.
+
+4. Para ejecutar tu código, ve a `Build > Execute` o presiona `F5`. Esto ejecutará el archivo compilado y mostrará la salida en la consola de Geany.
