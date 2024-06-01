@@ -48,6 +48,18 @@ const isHomePage = currentPath === "/";
 				Inicio
 			</a>
 			{
+				!isHomePage && (
+					<a
+						href="/posts"
+						class="px-4 py-4 sm:py-0 sm:hover:underline"
+						aria-current={url.pathname.startsWith("/posts") ? "page" : false}
+						data-astro-prefetch
+					>
+						Posts
+					</a>
+				)
+			}
+			{
 				isHomePage &&
 					menuLinks.map((link) => (
 						<a
